@@ -1,7 +1,8 @@
 bug:
-  - ["bug", "Bug"]
+  - "bug"
+  - "Bug"
 documentation:
-  - ["documentation", "Documentation"]
+  - "documentation"
 firebase:
   - "firebase"
 UI:
