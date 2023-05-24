@@ -1,24 +1,21 @@
-name: "Label Issues"
+name: "Issue Labeler"
 on:
   issues:
     types: [opened, edited]
+  pull_request:
+    types: [opened, edited]
 
 jobs:
-  label:
+  triage:
     runs-on: ubuntu-latest
-     actions: read
-  contents: read
-  security-events: write
-  permissions:
+    permissions:
       issues: write
       pull-requests: write
-      actions: read
-      contents: read
-      security-events: write
     steps:
-      - uses: github/issue-labeler@v3.0
-        with:
-          configuration-path: .github/labels.yml
-          enable-versioned-regex: 0
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          sync-labels: 1
+    - uses: actions/checkout@v2    
+    - uses: github/issue-labeler@v3.0
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        configuration-path: .github/labels.yml
+        enable-versioned-regex: 0
+        include-title: 1
