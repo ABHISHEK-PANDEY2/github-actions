@@ -1,6 +1,4 @@
-bug:
-  - "bug"
-  - "Bug"
+bug: "bug" or "Bug"
 documentation:
   - "documentation"
 firebase:
