@@ -1,7 +1,7 @@
 bug:
-  - "bug"
+  - ["bug", "Bug"]
 documentation:
-  - "documentation"
+  - ["documentation", "Documentation"]
 firebase:
   - "firebase"
 UI:
@@ -10,3 +10,7 @@ UX:
   - "UX"
 help wanted:
   - "help"
+good first issue:
+  - "good first issue"
+CI/CD:
+  - "CI/CD"
